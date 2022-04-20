@@ -58,10 +58,12 @@ footer {
   .headerMenu nav ul li {
     display: inline-block;
     background-color: white;
-    color: #5555db;
-    margin: 3px;
-    padding: 3px;
-    border-radius: 0.3rem;
+    color: #6b6be5;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 0.15rem;
+    padding: 5px;
+    border-radius: 1rem;
     /*animacion del menu*/
     /* eliminacion de vineta*/ }
     .headerMenu nav ul li:hover {
@@ -131,23 +133,20 @@ footer {
   text-align: center; }
   .mainIndex .editHead {
     color: #1C2833;
-    text-align: center;
-    font-size: 2.5rem;
-    margin-top: 0.2rem;
-    margin-bottom: 0.2rem; }
+    font-size: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem; }
   .mainIndex .editSubt {
-    text-align: center;
     color: #1c2833d8;
-    font-size: 1.75rem;
-    padding-bottom: 1rem; }
+    font-size: 2rem;
+    padding-bottom: 1.5rem; }
   .mainIndex .editP {
     display: none;
     color: #1c2833be;
     font-weight: bold;
-    font-size: 1rem;
-    text-align: justify center;
-    padding-left: 4.75rem;
-    padding-right: 4.75rem; }
+    font-size: 1.25rem;
+    padding-left: 5rem;
+    padding-right: 5rem; }
 
 /*section3-WS*/
 .wsAnime {
@@ -173,52 +172,81 @@ footer {
   /*---version desktop---*/
   header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-end; }
     header .headerLogo img {
-      width: 100%; }
+      width: 80%;
+      margin-left: 2.5rem; }
     header .headerMenu, header .headerChart {
       display: flex;
-      justify-content: end;
+      justify-content: center;
       align-items: center; }
     header .headerChart {
-      display: block;
-      position: absolute;
-      right: 0;
       text-align: center; }
       header .headerChart img {
         width: 50%; }
-    header .headerMenu nav ul li a {
-      justify-content: end;
-      align-items: center;
-      font-size: 1.2rem;
-      font-weight: bold;
-      padding: 3px;
-      border-radius: 1rem; }
+    header .headerMenu nav ul li {
+      border-radius: 2rem; }
+      header .headerMenu nav ul li a {
+        justify-content: end;
+        align-items: center;
+        font-size: 1.2rem;
+        font-weight: bold; }
   /*----Cierre del header----*/
   /*---version Laptop 768px--*/
   /*----Propiedades del Footer----*/
   /*---version desktop 768px--*/
   footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 15vh;
+    height: 10vh;
     /*Prop de "C"*/
     /*color y size del H3*/
     /*ubicacionde redes sociales*/ }
     footer .footerImgC {
+      margin-left: 4rem;
       padding: 1rem; }
       footer .footerImgC img {
         width: 50%; }
     footer .footerText {
       display: flex;
-      font-size: 1rem;
+      font-size: 1.10rem;
       text-align: center; }
     footer .footerRedes {
-      position: absolute;
-      right: 0;
-      padding: 1rem;
+      padding: 2rem;
       /*Face-Inst size*/ }
       footer .footerRedes .sideF, footer .footerRedes .sideI {
-        width: 25%; } }
+        width: 25%;
+        margin: 0.5rem; }
+  /*----Cierre del footer----*/
+  /*---version Laptop 768px--*/
+  /*---Prop Main-Index---*/
+  /*--version laptop 768px--*/
+  /*section1-index*/
+  .imgIndex {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    /*marcos de imagenes main*/ }
+    .imgIndex .img1, .imgIndex .img3 {
+      width: 32%;
+      border: 0.3rem solid rgba(243, 238, 233, 0.979);
+      margin: 1rem; }
+    .imgIndex .img2 {
+      width: 30%;
+      border: 0.2rem solid rgba(243, 238, 233, 0.979);
+      margin-top: 1.2rem; }
+  /*section2-index*/
+  /*H1-H2-P color, size, margenes y paddins*/
+  .mainIndex .editHead {
+    font-size: 4rem;
+    margin-top: 2rem;
+    padding-bottom: 1rem; }
+  .mainIndex .editSubt {
+    font-size: 2.5rem; }
+  .mainIndex .editP {
+    margin: 0rem 7rem;
+    padding-bottom: 3rem;
+    display: block;
+    font-size: 1.75rem; } }
