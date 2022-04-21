@@ -1,43 +1,40 @@
-//variables
-$colorFondoHeader: #A3E4D7; 
-$colorFondoFooter: rgba(112, 105, 105, 0.692);
-$tipoFuente:'Roboto', sans-serif;
+//asociamos utilities a grid index
+@import "../utilities/variables";
 
 
-/*Propiedades del padre*/
+/*grid index*/
 .contenedorPadreIndex{
-    height: 80vh;
-    display: grid;
-    /*definimos layout*/
-    grid-template-areas: "header header header header"
+   height: 80vh;
+   display: grid;
+   grid-template-areas: "header header header header"
                          "main main main main"
                          "section1 section1 section1 section1"
                          "section2 section2 section2 section2"
                          "section3 section3 section3 section3"
                          "footer footer footer footer";
- }
- /*propiedades Hijos*/
- header{
-    grid-area: header;
-    background-color:$colorFondoHeader;
-    position: sticky;
-    top: 0;
-    z-index: 1;
- }      
- .tituloAu{
-    grid-area: main;
- }
- .section1{
-    grid-area: section1;
- }
- .section2{
-    grid-area: section2;
- }
- .section3{
-    grid-area: section3;
- }
- footer{
-    grid-area: footer;
-    font-family: $tipoFuente;
-    background-color: $colorFondoFooter;
- }
+}
+/*Prop Hijos*/
+header{
+   grid-area: header;
+   background-color:$colorFondoHeader;
+   position: sticky;
+   top: 0;
+   z-index: 1;
+}      
+.tituloAu{
+   grid-area: main;
+}
+.section1{
+   grid-area: section1;
+}
+.section2{
+   grid-area: section2;
+}
+.section3{
+   grid-area: section3;
+}
+footer{
+   grid-area: footer;
+   font-family: $tipoFuente;
+   background-color: $colorFondoFooter;
+}
