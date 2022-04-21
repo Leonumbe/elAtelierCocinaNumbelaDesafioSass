@@ -1,0 +1,17 @@
+//mixin sin param
+@mixin estiloFondo1{
+    background-image: url(../../img/pared.jpg);
+    background-size: cover;
+}
+
+//mixin sin param
+@mixin estiloFondo2{
+    background-image: url(../../img/madera.jpg);
+    background-size: cover;
+}
+
+@mixin flexCenter{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
