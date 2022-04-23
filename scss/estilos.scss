@@ -107,7 +107,7 @@
 }
 /*----Cierre-Footer----*/
 
-/*----Prop Main-index----*/
+/*----Prop-index----*/
 //--version Mobile
 .contMainIndex{
     @include estiloFondo1;
@@ -159,122 +159,557 @@
         50%{ transform: scale(1.10)}
     }
 }
-/*----cierre Main-index----*/
+/*----cierre-index----*/
 //---version Mobile
 
 @media only screen and (min-width: 768px){
       
-    /*-----Prop Header------*/
-    //---version laptop
-    header{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        .headerLogo img{
-            width: 80%;
-            margin-left: 2.5rem;
-        }
-        .headerMenu, .headerChart{
-            @include flexCenter
-        }
-        .headerChart{
-            text-align: center;
-            img{
-                width: 50%;
-            }
-        }
-        .headerMenu{
-            nav{
-                ul{
-                    li{
-                        border-radius: 2rem;
-                        a{
-                        justify-content: end;
-                        align-items: center;
-                        font-size: 1.1rem;
-                        font-weight: bold;
-                       
-                        }
-                    }
-                }
-            }
-        } 
-    }
-    /*----Cierre-header----*/
-    //--version Laptop 768px
+   /*-----Prop Header------*/
+   //---version laptop
+   header{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      .headerLogo img{
+         width: 80%;
+         margin-left: 2.5rem;
+      }
+      .headerMenu, .headerChart{
+         @include flexCenter
+      }
+      .headerChart{
+         text-align: center;
+         img{
+               width: 50%;
+         }
+      }
+      .headerMenu{
+         nav{
+               ul{
+                  li{
+                     border-radius: 2rem;
+                     a{
+                     justify-content: end;
+                     align-items: center;
+                     font-size: 1.1rem;
+                     font-weight: bold;
+                     
+                     }
+                  }
+               }
+         }
+      } 
+   }
+   /*----Cierre-header----*/
+   //--version Laptop 768px
 
-    /*----Prop Footer----*/
-    //---version Laptop 768px 
-    footer{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 10vh;
-        //Prop de "C"
-        .footerImgC{
+   /*----Prop Footer----*/
+   //---version Laptop 768px 
+   footer{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 10vh;
+      //Prop de "C"
+      .footerImgC{
+         margin-left: 4rem;
+         padding: 1rem; 
+         img{
+               width: 50%;
+         }
+      }
+      //color y size del H3
+      .footerText{
+         display: flex;
+         font-size: 1.10rem;
+         text-align: center;
+      }
+      //ubicacionde redes sociales
+      .footerRedes{
+         padding: 2rem;
+         //Face-Inst size
+         .sideF, .sideI{
+               width: 25%;
+               margin: 0.5rem;
+         }
+      }
+   }
+   /*----Cierre-Footer----*/
+   //--version Laptop 768px
+
+   /*----Prop Main-Index----*/
+   //--version laptop 768px
+   //section1-index
+   .imgIndex{
+      display: flex;
+      justify-content: center;
+      padding-top: 2rem;
+      //marcos de imagenes main
+      .img1, .img3{
+         width: 32%;
+         border: 0.3rem solid rgba(243, 238, 233, 0.979);
+         margin: 1rem;
+      }
+      .img2{
+         width: 30%;
+         border: 0.2rem solid rgba(243, 238, 233, 0.979);
+         margin-top: 1.2rem;
+      }
+   }
+   //section2-index
+   //H1-H2-P color, size, margenes y paddins
+   .mainIndex{
+      .editHead{
+         font-size: 4rem;
+         margin-top: 2rem;
+         padding-bottom: 1rem;
+      }
+      .editSubt{
+         font-size: 2.5rem;
+      }
+      .editP{
+         margin: 0rem $mgP - 13;
+         padding-bottom: 3rem;
+         display: block;
+         font-size: 1.75rem;
+      }
+   }
+}
+/*----------------------------*/
+//asociamos grid al html
+@import "layout/gridAu";
+    
+//*----Prop-aboutUs----*/
+//--Version Mobile
+
+//contenedor Main-AboutUs
+.contMainAu{
+   @include estiloFondo2
+   }  
+//titulo About us
+main{
+   .tituloAu{
+      padding: 1rem 0 1.5rem 2rem;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #1C2833;
+   }
+}
+//Section1
+.section1{
+   .block1Au{
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      img{
+         margin: 0.3rem;
+         width: 49%;
+         border:5px solid white;
+      }
+      p{
+         @include blockP;
+      }
+   }
+   .block2Au{
+      display: flex;
+      flex-flow: column-reverse wrap;
+      align-items: center;
+      p{
+         @include blockP;
+      }
+      video{
+         margin: 0.3rem;
+         border: 5px solid rgb(19, 12, 12);
+         width: 50%;
+         height: 70%;
+      }
+   }
+}
+//Prop Filosofia
+.section2{
+   .subAboutUs{
+      padding: 0.75rem;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #1C2833;
+   }
+   .block3Au{
+      text-align: center;
+      .img1, .img2{
+         border: 5px solid white;
+         width: 50%;
+      }
+      p{
+         @include blockP;
+      }
+
+   }
+}
+    
+/*---cierre-About Us---*/
+//---version Mobile
+
+@media only screen and (min-width:768px){
+     
+   /*--Prop Main-AboutUs--*/
+   //version laptop
+   main{
+      .tituloAu{
+         @include tituloVs768
+      }
+   }
+   .section1{
+      .block1Au{
+         flex-flow: row nowrap;
+         justify-content: center;
+         margin: 1rem 4rem;
+         img{
+            width: 35%;
+            margin-left: 7rem;
+         }
+         p{
+            text-align: justify;
+            font-size: 1.1rem;
+            letter-spacing: 0.1rem;
+         } 
+      }
+      .block2Au{
+         flex-flow: row nowrap;
+         justify-content: center;
+         margin: 1rem 4rem;
+         p{
+            text-align: left;
             margin-left: 4rem;
-            padding: 1rem; 
-            img{
-                width: 50%;
-            }
-        }
-        //color y size del H3
-        .footerText{
-            display: flex;
-            font-size: 1.10rem;
+            font-size: 1.1rem;
+            letter-spacing: 0.1rem;
+         }
+         video{
+            width: 40%;
+            height: 30;
+            margin-right: 3rem;
+            margin-bottom: 2rem;
+         }
+      }
+   }
+   .section2{
+      .subAboutUs{
+         @include tituloVs768 
+      }
+      .block3Au{
+         display: flex;
+         flex-flow: row nowrap;
+         justify-content: center;
+         align-items: center;
+         margin: 0rem 2rem;
+         padding-bottom: 2rem;
+         .img1{
+            max-width: 40%;
+         }
+         p{
             text-align: center;
-        }
-        //ubicacionde redes sociales
-        .footerRedes{
-            padding: 2rem;
-            //Face-Inst size
-            .sideF, .sideI{
-                width: 25%;
-                margin: 0.5rem;
-            }
-        }
-    }
-    /*----Cierre-Footer----*/
-    //--version Laptop 768px
-   
-    /*----Prop Main-Index----*/
-    //--version laptop 768px
-    //section1-index
-    .imgIndex{
-        display: flex;
-        justify-content: center;
-        padding-top: 2rem;
-        //marcos de imagenes main
-        .img1, .img3{
-            width: 32%;
-            border: 0.3rem solid rgba(243, 238, 233, 0.979);
-            margin: 1rem;
-        }
-        .img2{
-            width: 30%;
-            border: 0.2rem solid rgba(243, 238, 233, 0.979);
-            margin-top: 1.2rem;
-        }
-    }
-    //section2-index
-    //H1-H2-P color, size, margenes y paddins
-    .mainIndex{
-        .editHead{
-            font-size: 4rem;
-            margin-top: 2rem;
-            padding-bottom: 1rem;
-        }
-        .editSubt{
-            font-size: 2.5rem;
-        }
-        .editP{
-            margin: 0rem $mgP - 13;
-            padding-bottom: 3rem;
-            display: block;
-            font-size: 1.75rem;
-        }
-    }
+            font-size: 1.1rem;
+            padding-left: 1.1rem;
+            padding-right: 1.1rem;
+         }
+         .img2{
+            width: 325px;
+         }
+      }
+   }
+}
+/*----Cierre-Aboutus----*/
+//--version laptop 
+
+/*-------------------------------------*/
+
+//asociamos grid al html
+@import "layout/gridFtg";
+
+/*----Prop Main-FoodtoGo----*/
+//--Version Mobile
+
+/*contenedor cuerpo Main*/
+.contMainFtg{
+  /* @include estiloFondo1;*/
+   font-family: 'Roboto', sans-serif;
+   color: #1C2833;
+}
+//titulo Ftg
+main{
+   .tituloFtg{
+      padding: 1rem 0 1.5rem 2rem;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: bold;
+   }
+}
+     
+     .contS1Prod{
+        text-align: center;
+     }
+     .imgProdFtg{
+        width: 25%;
+        border: 5px solid white;
+     }
+     .btmSurtido1, .btmSurtido2, .btmSurtido3, .btmSurtido4, .btmSurtido5, .btmSurtido6{
+        background-color: rgb(26, 26, 227);
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+        padding: 0.2rem;
+        margin: 0.3rem;
+     }
+/*----cierre-FoodtoGo----*/
+//--version Mobile
+  
+@media only screen and (min-width: 1024px){
+ 
+   /*--Prop Main-FoodtoGo--*/
+   //--version Laptop  
+      
+   /*----Cierre-FoodtoGo----*/
+   //--version laptop 
 }
 
+/*-----------------------------------------/
 
-    
+/*----Prop Main-Faqs----*/
+//--Version Mobile 480px
+
+//asociamos grid al html
+@import "layout/gridFaqs";
+
+.contMainFaqs{
+   @include estiloFondo3;
+   font-family:'Roboto', sans-serif;
+   color: #1C2833;
+} 
+main{
+   .tituloFaqs{
+      margin-left: 2rem;
+      padding: 1rem 0rem 0.5rem 2rem;
+      h1{
+      text-align: center;
+      font-size: 3.5rem;
+      font-weight: bold;
+      }
+      
+   }
+
+}
+.section1{
+   .subFaqs{
+      display: none;
+      h2{
+      text-align: left;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #1C2833;
+      }
+   }
+}
+/*incluir componente de boostrap*/    
+.contSectionFaq h3{
+   padding: 1rem;
+   font-size: 1.5rem;
+   text-align: center;
+   background-color:rgba(255, 255, 255, 0.198);
+}
+.contSectionFaq p{
+   padding: 0.1rem;
+   font-size: 1rem;
+   margin-left: 1rem;
+   background-color: rgba(255, 255, 255, 0.266);
+   font-weight: bold;
+   margin-left: 1rem;
+}
+/*----cierre Main-Faqs----*/
+//--version Mobile
+  
+@media only screen and (min-width: 768px){
+  
+   /*----Prop Main-Faqs----*/
+   //--version Laptop
+   main{
+      .tituloFaqs{
+         margin-left: 2rem;
+         h1{
+         text-align: left;
+         font-size: 5rem;
+         font-weight: bold;
+         }
+      }
+   }
+   .section1{     
+      .subFaqs {
+         display: block;
+         margin-left: 2rem;
+         h2{
+         text-align: left;
+         font-size: 2.5rem;
+         color: whitesmoke;
+         }
+      }
+   }
+   /*adaptar componente boostrap*/
+     .contSectionFaq h3{
+        margin-left: 2rem;
+        padding: 0.3rem;
+        font-size: 1.5rem;
+        text-align: left;
+     }
+     .contSectionFaq p{
+        padding-left:3rem;
+        padding-right: 15rem;
+        font-size: 1rem;
+        text-align: left;
+     }
+     
+}
+/*----Cierre Main-Faqs----*/
+//--version Laptop
+
+/*---------------------------------/
+
+/*----Prop Main-Contact Us---*/
+//--Version Mobile 
+
+//asociamos grid al html
+@import "layout/gridCu";
+
+.contMainCu{
+   @include estiloFondo2;
+   font-family:'Roboto', sans-serif;
+}
+main{
+   .tituloCu{
+      h1{
+         padding: 1.5rem 1rem 1.5rem 3rem;
+         text-align: center;
+         font-size: 1.5rem;
+         font-weight: bold;
+         color: #1C2833;
+      } 
+   }
+}
+.contSectionCu{
+   .contSectionCu1, .contSectionCu2, .contSectionCu3{
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      h3{
+         font-size: 1rem;
+      }
+      img{
+         width: 15%;
+         margin-left: 2.5rem;
+         padding: 0.75rem;
+      }
+   }
+   .mapaCu{
+      margin: 0.5rem;
+      text-align: center;
+      iframe{
+         width: 35%;
+         height: 35%;
+      }
+   }      
+}
+//Prop subtitulo
+.section1{
+   .subTituloCu{
+      h2{
+      padding: 1rem 1rem 1.5rem 3rem;
+      text-align: left;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #1C2833;
+      }
+   }
+//agregar complemento boostrap
+   .contFormCu{
+      text-align: left;
+      padding-left: 2rem;
+   }
+   .contFormCu .form1Cu, .form2Cu, .form3Cu{
+     padding: 0.5rem;
+   }
+   .form1Cu, .form2Cu, .form3Cu, input{
+      padding-right: 1rem;
+   }
+   .contFormCu .form4Cu input{
+      background-color: blue;
+      color: white;
+      font-size: 1.1rem;
+      border-radius: 15%;
+      padding: 3px;
+      margin-left: 7rem;
+   }
+}
+//Animacion Botton-back    
+.section2{
+   .backHomeCu{
+      text-align: center;
+      padding: 1rem;
+      img{
+         width: 15%;
+         transition: 2s;
+         &:hover{ transform: scale(1.2);
+         }
+      }
+      p{
+         font-weight: bold;
+         color: #1C2833;
+      }
+   }
+
+}    
+/*---cierre Main-Contact Us-----*/
+//--version Mobile 
+
+   @media only screen and (min-width: 768px){
+
+       /*----Prop Main-Contact Us---*/
+      //--Version Laptop
+      .contMainCu
+         .contMainCu2{
+         display: flex;
+         justify-content: space-evenly;
+         }
+      main{
+         .tituloCu{
+            h1{
+               padding: 3rem 0rem 1.5rem 3rem;
+               text-align: left;
+               font-size: 2rem;
+            }
+         } 
+         .mapaCu{
+            margin: 0.5rem;
+            text-align: center;
+            iframe{
+               width: 70%;
+               height: 70%;
+            }  
+         }
+      }
+      .section1{
+         .subTituloCu{
+            h2{
+               padding: 3rem 0rem 1.5rem 3rem;
+               text-align: left;
+               font-size: 2rem;
+            }
+         } 
+      }
+  }
+  /*----cierre-Contact Us----*/
+  //--version Laptop
+     
+     /*--No es magia es codigo!!!!--*/
+     /*gracias por permitirme salir de mi zona de confort y romperme la cabeza para que esto me salga, Grande Fede!!*/
+              /*--RIP--*/
+

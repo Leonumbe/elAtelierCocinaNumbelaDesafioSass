@@ -1,9 +1,9 @@
 //asociamos utilities a grid index
 @import "../utilities/variables";
 
-/*Grid-About Us*/
-.contenedorPadreAu{
-    height: 80vh;
+/*Grid-Faqs*/
+.contenedorPadreFaq{
+    height: 80vp;
     display: grid;
     grid-template-areas: "header header header header"
                          "main main main main"
@@ -20,7 +20,7 @@
     top: 0;
     z-index: 1;
  }      
- main{
+ .contMainFaqs{
     grid-area: main;
  }
  .section1{

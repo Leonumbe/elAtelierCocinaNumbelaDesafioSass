@@ -8,7 +8,7 @@
 .contenedorPadreIndex {
   height: 80vh;
   display: grid;
-  grid-template-areas: "header header header header" "main main main main" "section1 section1 section1 section1" "section2 section2 section2 section2" "section3 section3 section3 section3" "footer footer footer footer"; }
+  grid-template-areas: "header header header header" "section1 section1 section1 section1" "main main main main" "section2 section2 section2 section2" "section3 section3 section3 section3" "footer footer footer footer"; }
 
 /*Prop Hijos*/
 header {
@@ -18,17 +18,14 @@ header {
   top: 0;
   z-index: 1; }
 
-.tituloAu {
-  grid-area: main; }
-
 .section1 {
   grid-area: section1; }
 
+main {
+  grid-area: main; }
+
 .section2 {
   grid-area: section2; }
-
-.section3 {
-  grid-area: section3; }
 
 footer {
   grid-area: footer;
@@ -99,7 +96,7 @@ footer {
       transition: 0.5s; }
 
 /*----Cierre-Footer----*/
-/*----Prop Main-index----*/
+/*----Prop-index----*/
 .contMainIndex {
   background-image: url(../../img/pared.jpg);
   background-size: cover; }
@@ -145,7 +142,7 @@ footer {
   50% {
     transform: scale(1.1); } }
 
-/*----cierre Main-index----*/
+/*----cierre-index----*/
 @media only screen and (min-width: 768px) {
   /*-----Prop Header------*/
   header {
@@ -216,3 +213,445 @@ footer {
     padding-bottom: 3rem;
     display: block;
     font-size: 1.75rem; } }
+
+/*----------------------------*/
+/*Grid-About Us*/
+.contenedorPadreAu {
+  height: 80vh;
+  display: grid;
+  grid-template-areas: "header header header header" "main main main main" "section1 section1 section1 section1" "section2 section2 section2 section2" "section3 section3 section3 section3" "footer footer footer footer"; }
+
+/*Prop-Hijos*/
+header {
+  grid-area: header;
+  background-color: #A3E4D7;
+  position: sticky;
+  top: 0;
+  z-index: 1; }
+
+main {
+  grid-area: main; }
+
+.section1 {
+  grid-area: section1; }
+
+.section2 {
+  grid-area: section2; }
+
+.section3 {
+  grid-area: section3; }
+
+footer {
+  grid-area: footer;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(112, 105, 105, 0.692); }
+
+.contMainAu {
+  background-image: url(../../img/madera.jpg);
+  background-size: cover; }
+
+main .tituloAu {
+  padding: 1rem 0 1.5rem 2rem;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #1C2833; }
+
+.section1 .block1Au {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center; }
+  .section1 .block1Au img {
+    margin: 0.3rem;
+    width: 49%;
+    border: 5px solid white; }
+  .section1 .block1Au p {
+    padding: 0.3rem 3rem;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #1C2833; }
+
+.section1 .block2Au {
+  display: flex;
+  flex-flow: column-reverse wrap;
+  align-items: center; }
+  .section1 .block2Au p {
+    padding: 0.3rem 3rem;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #1C2833; }
+  .section1 .block2Au video {
+    margin: 0.3rem;
+    border: 5px solid #130c0c;
+    width: 50%;
+    height: 70%; }
+
+.section2 .subAboutUs {
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1C2833; }
+
+.section2 .block3Au {
+  text-align: center; }
+  .section2 .block3Au .img1, .section2 .block3Au .img2 {
+    border: 5px solid white;
+    width: 50%; }
+  .section2 .block3Au p {
+    padding: 0.3rem 3rem;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #1C2833; }
+
+/*---cierre-About Us---*/
+@media only screen and (min-width: 768px) {
+  /*--Prop Main-AboutUs--*/
+  main .tituloAu {
+    font-size: 1.5rem;
+    padding: 2rem 5.5rem 1rem; }
+  .section1 .block1Au {
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 1rem 4rem; }
+    .section1 .block1Au img {
+      width: 35%;
+      margin-left: 7rem; }
+    .section1 .block1Au p {
+      text-align: justify;
+      font-size: 1.1rem;
+      letter-spacing: 0.1rem; }
+  .section1 .block2Au {
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 1rem 4rem; }
+    .section1 .block2Au p {
+      text-align: left;
+      margin-left: 4rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.1rem; }
+    .section1 .block2Au video {
+      width: 40%;
+      height: 30;
+      margin-right: 3rem;
+      margin-bottom: 2rem; }
+  .section2 .subAboutUs {
+    font-size: 1.5rem;
+    padding: 2rem 5.5rem 1rem; }
+  .section2 .block3Au {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 2rem;
+    padding-bottom: 2rem; }
+    .section2 .block3Au .img1 {
+      max-width: 40%; }
+    .section2 .block3Au p {
+      text-align: center;
+      font-size: 1.1rem;
+      padding-left: 1.1rem;
+      padding-right: 1.1rem; }
+    .section2 .block3Au .img2 {
+      width: 325px; } }
+
+/*----Cierre-Aboutus----*/
+/*-------------------------------------*/
+/*Grid-Food to Go*/
+.contenedorPadreFtg {
+  height: 80vh;
+  display: grid;
+  grid-template-areas: "header header header header" "main main main main" "section1 section1 section1 section1" "section2 section2 section2 section2" "section3 section3 section3 section3" "footer footer footer footer"; }
+
+/*Prop-Hijos*/
+header {
+  grid-area: header;
+  background-color: #A3E4D7;
+  position: sticky;
+  top: 0;
+  z-index: 1; }
+
+.contMainFtg {
+  grid-area: main; }
+
+.section1 {
+  grid-area: section1; }
+
+.section2 {
+  grid-area: section2; }
+
+.section3 {
+  grid-area: section3; }
+
+footer {
+  grid-area: footer;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(112, 105, 105, 0.692); }
+
+/*----Prop Main-FoodtoGo----*/
+/*contenedor cuerpo Main*/
+.contMainFtg {
+  /* @include estiloFondo1;*/
+  font-family: 'Roboto', sans-serif;
+  color: #1C2833; }
+
+main .tituloFtg {
+  padding: 1rem 0 1.5rem 2rem;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold; }
+
+.contS1Prod {
+  text-align: center; }
+
+.imgProdFtg {
+  width: 25%;
+  border: 5px solid white; }
+
+.btmSurtido1, .btmSurtido2, .btmSurtido3, .btmSurtido4, .btmSurtido5, .btmSurtido6 {
+  background-color: #1a1ae3;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0.2rem;
+  margin: 0.3rem; }
+
+/*----cierre-FoodtoGo----*/
+@media only screen and (min-width: 1024px) {
+  /*--Prop Main-FoodtoGo--*/
+  /*----Cierre-FoodtoGo----*/ }
+
+/*-----------------------------------------/
+
+/*----Prop Main-Faqs----*/
+/*Grid-Faqs*/
+.contenedorPadreFaq {
+  height: 80vp;
+  display: grid;
+  grid-template-areas: "header header header header" "main main main main" "section1 section1 section1 section1" "section2 section2 section2 section2" "section3 section3 section3 section3" "footer footer footer footer"; }
+
+/*Prop-Hijos*/
+header {
+  grid-area: header;
+  background-color: #A3E4D7;
+  position: sticky;
+  top: 0;
+  z-index: 1; }
+
+.contMainFaqs {
+  grid-area: main; }
+
+.section1 {
+  grid-area: section1; }
+
+.section2 {
+  grid-area: section2; }
+
+.section3 {
+  grid-area: section3; }
+
+footer {
+  grid-area: footer;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(112, 105, 105, 0.692); }
+
+.contMainFaqs {
+  background-image: url(../img/fondofaqs.webp);
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  color: #1C2833; }
+
+main .tituloFaqs {
+  margin-left: 2rem;
+  padding: 1rem 0rem 0.5rem 2rem; }
+  main .tituloFaqs h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: bold; }
+
+.section1 .subFaqs {
+  display: none; }
+  .section1 .subFaqs h2 {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1C2833; }
+
+/*incluir componente de boostrap*/
+.contSectionFaq h3 {
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.198); }
+
+.contSectionFaq p {
+  padding: 0.1rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+  background-color: rgba(255, 255, 255, 0.266);
+  font-weight: bold;
+  margin-left: 1rem; }
+
+/*----cierre Main-Faqs----*/
+@media only screen and (min-width: 768px) {
+  /*----Prop Main-Faqs----*/
+  main .tituloFaqs {
+    margin-left: 2rem; }
+    main .tituloFaqs h1 {
+      text-align: left;
+      font-size: 5rem;
+      font-weight: bold; }
+  .section1 .subFaqs {
+    display: block;
+    margin-left: 2rem; }
+    .section1 .subFaqs h2 {
+      text-align: left;
+      font-size: 2.5rem;
+      color: whitesmoke; }
+  /*adaptar componente boostrap*/
+  .contSectionFaq h3 {
+    margin-left: 2rem;
+    padding: 0.3rem;
+    font-size: 1.5rem;
+    text-align: left; }
+  .contSectionFaq p {
+    padding-left: 3rem;
+    padding-right: 15rem;
+    font-size: 1rem;
+    text-align: left; } }
+
+/*----Cierre Main-Faqs----*/
+/*---------------------------------/
+
+/*----Prop Main-Contact Us---*/
+/*Grid-Contact Us*/
+.contenedorPadreCu {
+  height: 80vh;
+  display: grid;
+  grid-template-areas: "header header header header" "main main main main" "section1 section1 section1 section1" "section2 section2 section2 section2" "section3 section3 section3 section3" "footer footer footer footer"; }
+
+/*propiedades hijos*/
+header {
+  grid-area: header;
+  background-color: #A3E4D7;
+  position: sticky;
+  top: 0;
+  z-index: 1; }
+
+.contMainCu {
+  grid-area: main; }
+
+.section1 {
+  grid-area: section1; }
+
+.section2 {
+  grid-area: section2; }
+
+.section3 {
+  grid-area: section3; }
+
+footer {
+  grid-area: footer;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(112, 105, 105, 0.692); }
+
+.contMainCu {
+  background-image: url(../../img/madera.jpg);
+  background-size: cover;
+  font-family: 'Roboto', sans-serif; }
+
+main .tituloCu h1 {
+  padding: 1.5rem 1rem 1.5rem 3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1C2833; }
+
+.contSectionCu .contSectionCu1, .contSectionCu .contSectionCu2, .contSectionCu .contSectionCu3 {
+  display: flex;
+  justify-content: left;
+  align-items: center; }
+  .contSectionCu .contSectionCu1 h3, .contSectionCu .contSectionCu2 h3, .contSectionCu .contSectionCu3 h3 {
+    font-size: 1rem; }
+  .contSectionCu .contSectionCu1 img, .contSectionCu .contSectionCu2 img, .contSectionCu .contSectionCu3 img {
+    width: 15%;
+    margin-left: 2.5rem;
+    padding: 0.75rem; }
+
+.contSectionCu .mapaCu {
+  margin: 0.5rem;
+  text-align: center; }
+  .contSectionCu .mapaCu iframe {
+    width: 35%;
+    height: 35%; }
+
+.section1 .subTituloCu h2 {
+  padding: 1rem 1rem 1.5rem 3rem;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1C2833; }
+
+.section1 .contFormCu {
+  text-align: left;
+  padding-left: 2rem; }
+
+.section1 .contFormCu .form1Cu, .section1 .form2Cu, .section1 .form3Cu {
+  padding: 0.5rem; }
+
+.section1 .form1Cu, .section1 .form2Cu, .section1 .form3Cu, .section1 input {
+  padding-right: 1rem; }
+
+.section1 .contFormCu .form4Cu input {
+  background-color: blue;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 15%;
+  padding: 3px;
+  margin-left: 7rem; }
+
+.section2 .backHomeCu {
+  text-align: center;
+  padding: 1rem; }
+  .section2 .backHomeCu img {
+    width: 15%;
+    transition: 2s; }
+    .section2 .backHomeCu img:hover {
+      transform: scale(1.2); }
+  .section2 .backHomeCu p {
+    font-weight: bold;
+    color: #1C2833; }
+
+/*---cierre Main-Contact Us-----*/
+@media only screen and (min-width: 768px) {
+  /*----Prop Main-Contact Us---*/
+  .contMainCu
+.contMainCu2 {
+    display: flex;
+    justify-content: space-evenly; }
+  main .tituloCu h1 {
+    padding: 3rem 0rem 1.5rem 3rem;
+    text-align: left;
+    font-size: 2rem; }
+  main .mapaCu {
+    margin: 0.5rem;
+    text-align: center; }
+    main .mapaCu iframe {
+      width: 70%;
+      height: 70%; }
+  .section1 .subTituloCu h2 {
+    padding: 3rem 0rem 1.5rem 3rem;
+    text-align: left;
+    font-size: 2rem; } }
+
+/*----cierre-Contact Us----*/
+/*--No es magia es codigo!!!!--*/
+/*gracias por permitirme salir de mi zona de confort y romperme la cabeza para que esto me salga, Grande Fede!!*/
+/*--RIP--*/
