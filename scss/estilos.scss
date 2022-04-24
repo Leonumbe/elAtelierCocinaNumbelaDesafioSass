@@ -433,35 +433,47 @@ main{
 
 /*contenedor cuerpo Main*/
 .contMainFtg{
-  /* @include estiloFondo1;*/
-   font-family: 'Roboto', sans-serif;
-   color: #1C2833;
+@include estiloFondo1;
+   
 }
 //titulo Ftg
 main{
    .tituloFtg{
+      h1{
+      font-family: 'Roboto', sans-serif;
+   color: #b6150c;
       padding: 1rem 0 1.5rem 2rem;
       text-align: left;
-      font-size: 1rem;
-      font-weight: bold;
+      font-size: 4rem;
+      font-weight:bold;
+      }
    }
 }
-     
-     .contS1Prod{
-        text-align: center;
-     }
-     .imgProdFtg{
-        width: 25%;
-        border: 5px solid white;
-     }
-     .btmSurtido1, .btmSurtido2, .btmSurtido3, .btmSurtido4, .btmSurtido5, .btmSurtido6{
-        background-color: rgb(26, 26, 227);
-        color: white;
-        text-align: center;
-        border-radius: 5px;
-        padding: 0.2rem;
-        margin: 0.3rem;
-     }
+/*Prop Cards*/
+.section1{
+   .contS1Prod{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content:space-evenly;
+      .card{
+         margin: 2rem 5rem;
+         text-align: center;
+         padding: 0;
+         img{
+            border: 3.5px solid rgb(168, 164, 164);
+            }
+         .estiloCard{
+            background-image: linear-gradient(to right, whitesmoke, rgb(183, 174, 174));
+            .btn{
+               &:hover{transform: scale(1.1);
+               box-shadow: 3px 3px #1C2833;
+            }
+               
+            }
+         }
+      }
+   }
+}
 /*----cierre-FoodtoGo----*/
 //--version Mobile
   
@@ -489,12 +501,13 @@ main{
 } 
 main{
    .tituloFaqs{
-      margin-left: 2rem;
+      margin-left: 3rem;
       padding: 1rem 0rem 0.5rem 2rem;
       h1{
-      text-align: center;
-      font-size: 3.5rem;
+      text-align: left;
+      font-size: 5rem;
       font-weight: bold;
+      color: whitesmoke;
       }
       
    }
@@ -508,23 +521,31 @@ main{
       font-size: 1rem;
       font-weight: bold;
       color: #1C2833;
+      margin-bottom: 3rem;
       }
    }
 }
-/*incluir componente de boostrap*/    
-.contSectionFaq h3{
-   padding: 1rem;
-   font-size: 1.5rem;
-   text-align: center;
-   background-color:rgba(255, 255, 255, 0.198);
-}
-.contSectionFaq p{
-   padding: 0.1rem;
-   font-size: 1rem;
-   margin-left: 1rem;
-   background-color: rgba(255, 255, 255, 0.266);
-   font-weight: bold;
-   margin-left: 1rem;
+//VERRRRRRR!!!!!!!!
+ /*Prop Acordion*/
+.section2{
+   .contS2Faq{
+      .accordion{
+         margin: 0.5rem 1rem 3rem 1rem;
+         .estilosAcordion{
+            background-color: rgba(214, 205, 205, 0.897);
+            margin: 1rem 4rem;
+            .estiloTextoAcord{
+               background-color:rgba(214, 205, 205, 0.897);
+               font-weight: bold;
+               padding: 1rem;
+               font-size: 1rem;
+               p{
+                  font-size: 0.75rem;
+               }
+            }
+         }
+      }
+   }
 }
 /*----cierre Main-Faqs----*/
 //--version Mobile
@@ -538,36 +559,27 @@ main{
          margin-left: 2rem;
          h1{
          text-align: left;
-         font-size: 5rem;
+         font-size: 8rem;
          font-weight: bold;
+         color: whitesmoke;
          }
       }
    }
    .section1{     
       .subFaqs {
-         display: block;
-         margin-left: 2rem;
+         display: inline-block;
+         margin-left: 4.5rem;
          h2{
+         
          text-align: left;
          font-size: 2.5rem;
          color: whitesmoke;
+         background-color: rgb(83, 157, 222);
          }
       }
    }
    /*adaptar componente boostrap*/
-     .contSectionFaq h3{
-        margin-left: 2rem;
-        padding: 0.3rem;
-        font-size: 1.5rem;
-        text-align: left;
-     }
-     .contSectionFaq p{
-        padding-left:3rem;
-        padding-right: 15rem;
-        font-size: 1rem;
-        text-align: left;
-     }
-     
+  
 }
 /*----Cierre Main-Faqs----*/
 //--version Laptop
