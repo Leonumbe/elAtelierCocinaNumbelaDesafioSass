@@ -21,7 +21,7 @@ header {
 .section1 {
   grid-area: section1; }
 
-main {
+.contMainIndex {
   grid-area: main; }
 
 .section2 {
@@ -46,12 +46,13 @@ footer {
 .headerMenu nav ul {
   list-style: none;
   text-align: center;
-  padding-bottom: 0.5rem; }
+  padding-left: 0;
+  margin-bottom: 0.3rem; }
   .headerMenu nav ul li {
     display: inline-block;
     background-color: whitesmoke;
-    margin: 0.15rem;
-    padding: 5px;
+    margin: 0.1rem;
+    padding: 0px 5px;
     border-radius: 1rem; }
     .headerMenu nav ul li:hover {
       background-color: #77a3d8;
@@ -78,11 +79,13 @@ footer {
   .footerImgC img {
     width: 5%; }
 
-.footerText {
+.footerText h3 {
   color: rgba(24, 23, 22, 0.904);
-  font-size: 0.8rem;
-  text-align: center; }
-  .footerText span {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0%; }
+  .footerText h3 span {
     color: darkblue;
     font-weight: bolder; }
 
@@ -90,35 +93,36 @@ footer {
   text-align: center;
   margin: 0.1rem; }
   .footerRedes .sideF, .footerRedes .sideI {
-    width: 7.5%; }
+    width: 7.5%;
+    padding-bottom: 0.1rem; }
     .footerRedes .sideF:hover, .footerRedes .sideI:hover {
       transform: scale(1.2);
       transition: 0.5s; }
 
 /*----Cierre-Footer----*/
 /*----Prop-index----*/
-.contMainIndex {
-  background-image: url(../../img/pared.jpg);
-  background-size: cover; }
+/*Prop carrusel*/
+.section1 .contenedorCarrusel img {
+  border: 0.5rem solid whitesmoke; }
 
-.imgIndex {
-  text-align: center; }
-  .imgIndex .img1, .imgIndex .img2, .imgIndex .img3 {
-    width: 50%;
-    border: 0.2rem solid rgba(243, 238, 233, 0.979);
-    margin: 0.5rem; }
+.section1 .carousel-control-prev-icon, .section1 .carousel-control-next-icon {
+  background-color: #777c818b; }
+
+main {
+  background-color: #f1d0d0; }
 
 .mainIndex {
   text-align: center; }
   .mainIndex .editHead {
     color: #1C2833;
     font-size: 3rem;
-    margin-top: 0.5rem;
+    Padding-top: 0.5rem;
     margin-bottom: 0.5rem; }
   .mainIndex .editSubt {
     color: #1c2833d8;
     font-size: 2rem;
-    padding-bottom: 1.5rem; }
+    padding-bottom: 1.5rem;
+    margin-bottom: 0; }
   .mainIndex .editP {
     display: none;
     color: #1c2833be;
@@ -128,9 +132,9 @@ footer {
 
 .wsAnime {
   position: fixed;
-  bottom: 7rem;
+  bottom: 9rem;
   right: 0;
-  width: 15%;
+  width: 140px;
   /*Animacion en loop*/
   animation-name: vive;
   animation-iteration-count: infinite;
@@ -189,22 +193,16 @@ footer {
         width: 25%;
         margin: 0.5rem; }
   /*----Cierre-Footer----*/
+  /*-----------------------------*/
   /*----Prop Main-Index----*/
-  .imgIndex {
-    display: flex;
-    justify-content: center;
-    padding-top: 2rem; }
-    .imgIndex .img1, .imgIndex .img3 {
-      width: 32%;
-      border: 0.3rem solid rgba(243, 238, 233, 0.979);
-      margin: 1rem; }
-    .imgIndex .img2 {
-      width: 30%;
-      border: 0.2rem solid rgba(243, 238, 233, 0.979);
-      margin-top: 1.2rem; }
+  .contGralCarrusel {
+    text-align: center; }
+  .contCarrusel {
+    text-align: center;
+    border: 1rem solid whitesmoke; }
   .mainIndex .editHead {
     font-size: 4rem;
-    margin-top: 2rem;
+    Padding-top: 2rem;
     padding-bottom: 1rem; }
   .mainIndex .editSubt {
     font-size: 2.5rem; }
@@ -212,7 +210,10 @@ footer {
     margin: 0rem 7rem;
     padding-bottom: 3rem;
     display: block;
-    font-size: 1.75rem; } }
+    font-size: 1.75rem; }
+  .wsAnime {
+    bottom: 9rem;
+    width: 175px; } }
 
 /*----------------------------*/
 /*Grid-About Us*/
@@ -565,7 +566,7 @@ footer {
 main .tituloCu h1 {
   padding: 1.5rem 1rem 1.5rem 3rem;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #1C2833; }
 
@@ -574,43 +575,41 @@ main .tituloCu h1 {
   justify-content: left;
   align-items: center; }
   .contSectionCu .contSectionCu1 h3, .contSectionCu .contSectionCu2 h3, .contSectionCu .contSectionCu3 h3 {
-    font-size: 1rem; }
+    font-size: 1rem;
+    font-weight: 700; }
   .contSectionCu .contSectionCu1 img, .contSectionCu .contSectionCu2 img, .contSectionCu .contSectionCu3 img {
     width: 15%;
     margin-left: 2.5rem;
     padding: 0.75rem; }
 
 .contSectionCu .mapaCu {
-  margin: 0.5rem;
+  margin: 0.5rem 0rem;
   text-align: center; }
-  .contSectionCu .mapaCu iframe {
-    width: 35%;
-    height: 35%; }
 
 .section1 .subTituloCu h2 {
-  padding: 1rem 1rem 1.5rem 3rem;
-  text-align: left;
-  font-size: 1.5rem;
+  padding: 1rem 1rem;
+  text-align: center;
+  font-size: 2rem;
   font-weight: bold;
   color: #1C2833; }
 
-.section1 .contFormCu {
-  text-align: left;
-  padding-left: 2rem; }
-
-.section1 .contFormCu .form1Cu, .section1 .form2Cu, .section1 .form3Cu {
-  padding: 0.5rem; }
-
-.section1 .form1Cu, .section1 .form2Cu, .section1 .form3Cu, .section1 input {
-  padding-right: 1rem; }
-
-.section1 .contFormCu .form4Cu input {
-  background-color: blue;
-  color: white;
-  font-size: 1.1rem;
-  border-radius: 15%;
-  padding: 3px;
-  margin-left: 7rem; }
+.contFormCu {
+  text-align: left; }
+  .contFormCu .stileForm {
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 0.5rem 3rem; }
+  .contFormCu .bottonForm {
+    text-align: right;
+    margin: 0.5rem 4rem; }
+    .contFormCu .bottonForm .btnStile {
+      background-color: #539dde;
+      color: #f1d0d0;
+      font-weight: bold;
+      border-radius: 1rem;
+      padding: 0.4rem 1.1rem;
+      border: none;
+      margin-right: 4rem; }
 
 .section2 .backHomeCu {
   text-align: center;
@@ -621,32 +620,54 @@ main .tituloCu h1 {
     .section2 .backHomeCu img:hover {
       transform: scale(1.2); }
   .section2 .backHomeCu p {
+    font-size: 0.75rem;
     font-weight: bold;
-    color: #1C2833; }
+    color: #539dde; }
 
 /*---cierre Main-Contact Us-----*/
 @media only screen and (min-width: 768px) {
   /*----Prop Main-Contact Us---*/
-  .contMainCu
-.contMainCu2 {
+  .contMainCu .contMainCu2 {
     display: flex;
     justify-content: space-evenly; }
   main .tituloCu h1 {
-    padding: 3rem 0rem 1.5rem 3rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
     text-align: left;
-    font-size: 2rem; }
-  main .mapaCu {
-    margin: 0.5rem;
-    text-align: center; }
-    main .mapaCu iframe {
-      width: 70%;
-      height: 70%; }
+    font-size: 2.5rem;
+    padding: 0rem; }
   .section1 .subTituloCu h2 {
-    padding: 3rem 0rem 1.5rem 3rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding: 0rem;
     text-align: left;
-    font-size: 2rem; } }
+    font-size: 2.5rem; }
+  .contFormCu {
+    text-align: left;
+    margin: 1rem 0rem; }
+    .contFormCu .formCu {
+      margin: 0rem;
+      padding: 0rem; }
+      .contFormCu .formCu .stileForm {
+        font-size: 1.25rem;
+        font-weight: 500; }
+      .contFormCu .formCu .bottonForm {
+        text-align: right;
+        margin: 1.5rem 1rem; }
+        .contFormCu .formCu .bottonForm .btnStile {
+          background-color: #539dde;
+          color: #f1d0d0;
+          font-weight: bold;
+          border-radius: 1rem;
+          padding: 0.4rem 1.1rem;
+          border: none; }
+  .section2 .backHomeCu {
+    margin: 2rem; }
+    .section2 .backHomeCu img {
+      width: 120px; }
+    .section2 .backHomeCu p {
+      font-size: 1rem; } }
 
 /*----cierre-Contact Us----*/
 /*--No es magia es codigo!!!!--*/
 /*gracias por permitirme salir de mi zona de confort y romperme la cabeza para que esto me salga, Grande Fede!!*/
-/*--RIP--*/
