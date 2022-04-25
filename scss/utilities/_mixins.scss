@@ -3,7 +3,6 @@
     background-image: url(../../img/pared.jpg);
     background-size: cover;
 }
-
 //mixin estilo de fondo madera
 @mixin estiloFondo2{
     background-image: url(../../img/madera.jpg);
@@ -35,11 +34,3 @@
     color: #1C2833;
 }
 //mixin modelo botton1
-@mixin botton1{
-    background-color:nth($colorFuente,9);
-    color: nth($colorFuente,8);
-    font-weight: bold;
-    border-radius: 1rem;
-    padding:0.4rem 1.1rem;
-    border: none;
-}

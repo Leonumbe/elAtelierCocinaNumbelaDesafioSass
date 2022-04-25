@@ -10,6 +10,7 @@
 @import "utilities/mixins";
 @import "utilities/extends";
 @import "utilities/functions";
+@import "utilities/maps";
 
 //asociamos grid al index
 @import "layout/gridIndex";
@@ -85,14 +86,14 @@
 //color y size del H3
 .footerText{
    h3{
-      color: nth($colorFuente, 3);
+      color: nth($colorFuente,3);
       font-size: 1rem;
       font-weight: 600;
       text-align: center;
       margin-bottom: 0%;
       // detalle de linea
       span{
-        color: nth($colorFuente, 2);
+        color: nth($colorFuente,2);
         font-weight: bolder;
       }
    }
@@ -115,9 +116,7 @@
 
 /*----Prop-index----*/
 //--version Mobile
-.contMainIndex{
-//    @include estiloFondo1;
-}
+
 /*Prop carrusel*/
 .section1{
    .contenedorCarrusel{
@@ -130,24 +129,21 @@
       background-color: #777c818b;
    }
 }
-main{
-   background-color: nth($colorFuente,8);
-}
-
 //section2-Prop. H1-H2-P
- .mainIndex{
-    text-align: center;
-    .editHead{
-        color: nth($colorFuente, 4);
-        font-size: 3rem;
-        Padding-top: 0.5rem;
-        margin-bottom: 0.5rem;
+.mainIndex{
+   text-align: center;
+   background-color: $colorFondo1;
+   .editHead{
+      font-size: 3rem;
+      padding-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      color:nth($colorFuente,4);     
     }
     .editSubt{
-        color: nth($colorFuente, 5);
-        font-size: 2rem;
-        padding-bottom: 1.5rem;
-        margin-bottom: 0;
+      font-size: 2rem;
+      padding-bottom: 1.5rem;
+      margin-bottom: 0; 
+      color:nth($colorFuente,5);
     }
     .editP{
         display: none;
@@ -228,7 +224,7 @@ main{
          margin-left: 4rem;
          padding: 1rem; 
          img{
-               width: 50%;
+            width: 50%;
          }
       }
       //color y size del H3
@@ -256,7 +252,6 @@ main{
    //carrusel
    .contGralCarrusel{
       text-align: center;
-    
    }
    .contCarrusel{
       text-align: center;
@@ -267,7 +262,7 @@ main{
    .mainIndex{
       .editHead{
          font-size: 4rem;
-         Padding-top: 2rem;
+         padding-top: 2rem;
          padding-bottom: 1rem;
       }
       .editSubt{
@@ -303,16 +298,14 @@ main{
       text-align: left;
       font-size: 1rem;
       font-weight: bold;
-      text-transform: uppercase;
-      color: #1C2833;
+      color:nth($colorFuente,4);
    }
 }
 //Section1
 .section1{
    .block1Au{
-      display: flex;
+      @extend %stileBlock;
       flex-flow: column wrap;
-      align-items: center;
       img{
          margin: 0.3rem;
          width: 49%;
@@ -323,9 +316,8 @@ main{
       }
    }
    .block2Au{
-      display: flex;
       flex-flow: column-reverse wrap;
-      align-items: center;
+      @extend %stileBlock;
       p{
          @include blockP;
       }
@@ -444,18 +436,19 @@ main{
 /*contenedor cuerpo Main*/
 .contMainFtg{
 @include estiloFondo1;
+font-family: 'Roboto', sans-serif;
    
 }
 //titulo Ftg
 main{
    .tituloFtg{
+      @extend %stileTB;
       h1{
-      font-family: 'Roboto', sans-serif;
-   color: #b6150c;
-      padding: 1rem 0 1.5rem 2rem;
-      text-align: left;
-      font-size: 4rem;
-      font-weight:bold;
+      color:  rgb(247, 71, 71);
+      @extend %titulo1B;
+      }
+      h2{
+         display: none;
       }
    }
 }
@@ -473,12 +466,17 @@ main{
             border: 3.5px solid rgb(168, 164, 164);
             }
          .estiloCard{
-            background-image: linear-gradient(to right, whitesmoke, rgb(183, 174, 174));
+           background-image: linear-gradient(to right, whitesmoke, rgb(183, 174, 174));
+            }
             .btn{
+               color:map-get($map: $btA, $key:color-btA);
+               border: none;
+               border-radius: map-get($map: $btA, $key:border-radius-btA);
+               font-weight: map-get($map: $btA, $key:font-weight-btA);
+               font-size: map-get($map: $btA, $key:font-size-btA);
+               background-color: map-get($map: $btA, $key:background-color-btA);
                &:hover{transform: scale(1.1);
                box-shadow: 3px 3px #1C2833;
-            }
-               
             }
          }
       }
@@ -487,11 +485,28 @@ main{
 /*----cierre-FoodtoGo----*/
 //--version Mobile
   
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 768px){
  
    /*--Prop Main-FoodtoGo--*/
    //--version Laptop  
-      
+      main{
+         .tituloFtg{
+            margin-left: 2rem;
+            h1{
+            text-align: left;
+            font-size: 8rem;
+            font-weight: bold;
+            }
+            h2{
+               display: inline-block;
+               text-align: left;
+               font-size: 2.5rem;
+               font-weight: bold;
+               color: rgb(247, 71, 71);
+               background-color: nth($colorFuente,6);
+            }
+         }
+      }
    /*----Cierre-FoodtoGo----*/
    //--version laptop 
 }
@@ -511,28 +526,16 @@ main{
 } 
 main{
    .tituloFaqs{
-      margin-left: 3rem;
-      padding: 1rem 0rem 0.5rem 2rem;
+      @extend %stileTB;
       h1{
-      text-align: left;
-      font-size: 5rem;
-      font-weight: bold;
       color: whitesmoke;
+      @extend %titulo1B;
       }
-      
    }
-
 }
 .section1{
    .subFaqs{
       display: none;
-      h2{
-      text-align: left;
-      font-size: 1rem;
-      font-weight: bold;
-      color: #1C2833;
-      margin-bottom: 3rem;
-      }
    }
 }
 //complemento bootstrap Accordion
@@ -578,9 +581,10 @@ main{
    .section1{     
       .subFaqs {
          display: inline-block;
-         margin-left: 4.5rem;
+         margin-left: 4.75rem;
          h2{
-         
+         font-weight: bold;
+         margin-bottom: 1rem;
          text-align: left;
          font-size: 2.5rem;
          color: whitesmoke;
@@ -588,8 +592,6 @@ main{
          }
       }
    }
-   /*adaptar componente boostrap*/
-  
 }
 /*----Cierre Main-Faqs----*/
 //--version Laptop
@@ -619,9 +621,8 @@ main{
 }
 .contSectionCu{
    .contSectionCu1, .contSectionCu2, .contSectionCu3{
-      display: flex;
+      @extend %stileBlock;
       justify-content: left;
-      align-items: center;
       h3{
          font-size: 1rem;
          font-weight: 700;
@@ -661,8 +662,14 @@ main{
       text-align: right;
       margin: 0.5rem 4rem;
       .btnStile{
-         @include botton1;
-         margin-right: 4rem;
+         background-color: map-get($map:$btB, $key:background-color-btB);
+         color:map-get($map: $btB, $key:color-btB);
+         font-weight: map-get($map: $btB, $key:font-weight-btB);
+         border-radius: map-get($map: $btB, $key:border-radius-btB);
+         font-size: map-get($map: $btB, $key:font-size-btB );
+         padding:0.4rem 1.1rem;
+         border: none;
+         margin-right: 2.9rem;
       }
    }
 }
@@ -737,10 +744,8 @@ main{
          .bottonForm{
             text-align: right;
             margin: 1.5rem 1rem;
-            .btnStile{
-               @include botton1;
-            }
-         }
+            
+         } 
       }
    }
    //Animacion Botton-back    

@@ -1,20 +1,24 @@
 //variables
 $colorFondoHeader: #A3E4D7; 
 $colorFondoFooter: rgba(112, 105, 105, 0.692);
-$tipoFuente:'Roboto', sans-serif;
-
-//Operacion mat
-$pdP: 20rem;
-$mgP: 20rem;
+$colorFondo1: rgb(241, 208, 208);
+$colorFondo2: rgb(247, 71, 71);
+$colorFondo3: rgb(83, 157, 222);
+$tipoFuente: 'Roboto', sans-serif;
 
 //lista de colores fuentes
 $colorFuente:
  rgb(69, 69, 224),
-  darkblue ,
+  darkblue,
    rgba(24, 23, 22, 0.904),
      #1C2833,
       #1c2833d8,
+      //6
        #1c2833be,
          whitesmoke,
            rgb(241, 208, 208),
-             rgb(83, 157, 222);
+             rgb(83, 157, 222),
+               #c62820;
+               //10
+
+             

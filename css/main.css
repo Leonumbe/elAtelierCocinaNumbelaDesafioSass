@@ -4,6 +4,19 @@
   padding: 0;
   box-sizing: border-box; }
 
+.section1 .block1Au, .section1 .block2Au, .contSectionCu .contSectionCu1, .contSectionCu .contSectionCu2, .contSectionCu .contSectionCu3 {
+  display: flex;
+  align-items: center; }
+
+main .tituloFtg h1, main .tituloFaqs h1 {
+  text-align: left;
+  font-size: 5rem;
+  font-weight: 900; }
+
+main .tituloFtg, main .tituloFaqs {
+  margin-left: 3rem;
+  padding: 1rem 0rem 0.5rem 2rem; }
+
 /*grid index*/
 .contenedorPadreIndex {
   height: 80vh;
@@ -108,21 +121,19 @@ footer {
 .section1 .carousel-control-prev-icon, .section1 .carousel-control-next-icon {
   background-color: #777c818b; }
 
-main {
-  background-color: #f1d0d0; }
-
 .mainIndex {
-  text-align: center; }
+  text-align: center;
+  background-color: #f1d0d0; }
   .mainIndex .editHead {
-    color: #1C2833;
     font-size: 3rem;
-    Padding-top: 0.5rem;
-    margin-bottom: 0.5rem; }
+    padding-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #1C2833; }
   .mainIndex .editSubt {
-    color: #1c2833d8;
     font-size: 2rem;
     padding-bottom: 1.5rem;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    color: #1c2833d8; }
   .mainIndex .editP {
     display: none;
     color: #1c2833be;
@@ -202,7 +213,7 @@ main {
     border: 1rem solid whitesmoke; }
   .mainIndex .editHead {
     font-size: 4rem;
-    Padding-top: 2rem;
+    padding-top: 2rem;
     padding-bottom: 1rem; }
   .mainIndex .editSubt {
     font-size: 2.5rem; }
@@ -256,13 +267,10 @@ main .tituloAu {
   text-align: left;
   font-size: 1rem;
   font-weight: bold;
-  text-transform: uppercase;
   color: #1C2833; }
 
 .section1 .block1Au {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center; }
+  flex-flow: column wrap; }
   .section1 .block1Au img {
     margin: 0.3rem;
     width: 49%;
@@ -276,9 +284,7 @@ main .tituloAu {
     color: #1C2833; }
 
 .section1 .block2Au {
-  display: flex;
-  flex-flow: column-reverse wrap;
-  align-items: center; }
+  flex-flow: column-reverse wrap; }
   .section1 .block2Au p {
     padding: 0.3rem 3rem;
     text-align: justify;
@@ -399,15 +405,14 @@ footer {
 /*contenedor cuerpo Main*/
 .contMainFtg {
   background-image: url(../../img/pared.jpg);
-  background-size: cover; }
+  background-size: cover;
+  font-family: 'Roboto', sans-serif; }
 
 main .tituloFtg h1 {
-  font-family: 'Roboto', sans-serif;
-  color: #b6150c;
-  padding: 1rem 0 1.5rem 2rem;
-  text-align: left;
-  font-size: 4rem;
-  font-weight: bold; }
+  color: #f74747; }
+
+main .tituloFtg h2 {
+  display: none; }
 
 /*Prop Cards*/
 .section1 .contS1Prod {
@@ -422,13 +427,33 @@ main .tituloFtg h1 {
       border: 3.5px solid #a8a4a4; }
     .section1 .contS1Prod .card .estiloCard {
       background-image: linear-gradient(to right, whitesmoke, #b7aeae); }
-      .section1 .contS1Prod .card .estiloCard .btn:hover {
+    .section1 .contS1Prod .card .btn {
+      color: #1c2833be;
+      border: none;
+      border-radius: 1rem;
+      font-weight: bold;
+      font-size: 1.5rem;
+      background-color: #f74747; }
+      .section1 .contS1Prod .card .btn:hover {
         transform: scale(1.1);
         box-shadow: 3px 3px #1C2833; }
 
 /*----cierre-FoodtoGo----*/
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   /*--Prop Main-FoodtoGo--*/
+  main .tituloFtg {
+    margin-left: 2rem; }
+    main .tituloFtg h1 {
+      text-align: left;
+      font-size: 8rem;
+      font-weight: bold; }
+    main .tituloFtg h2 {
+      display: inline-block;
+      text-align: left;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #f74747;
+      background-color: #1c2833be; }
   /*----Cierre-FoodtoGo----*/ }
 
 /*-----------------------------------------/
@@ -471,23 +496,11 @@ footer {
   font-family: 'Roboto', sans-serif;
   color: #1C2833; }
 
-main .tituloFaqs {
-  margin-left: 3rem;
-  padding: 1rem 0rem 0.5rem 2rem; }
-  main .tituloFaqs h1 {
-    text-align: left;
-    font-size: 5rem;
-    font-weight: bold;
-    color: whitesmoke; }
+main .tituloFaqs h1 {
+  color: whitesmoke; }
 
 .section1 .subFaqs {
   display: none; }
-  .section1 .subFaqs h2 {
-    text-align: left;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #1C2833;
-    margin-bottom: 3rem; }
 
 /*Prop Acordion*/
 .section2 .contS2Faq .accordion {
@@ -515,13 +528,14 @@ main .tituloFaqs {
       color: whitesmoke; }
   .section1 .subFaqs {
     display: inline-block;
-    margin-left: 4.5rem; }
+    margin-left: 4.75rem; }
     .section1 .subFaqs h2 {
+      font-weight: bold;
+      margin-bottom: 1rem;
       text-align: left;
       font-size: 2.5rem;
       color: whitesmoke;
-      background-color: #539dde; }
-  /*adaptar componente boostrap*/ }
+      background-color: #539dde; } }
 
 /*----Cierre Main-Faqs----*/
 /*---------------------------------/
@@ -571,9 +585,7 @@ main .tituloCu h1 {
   color: #1C2833; }
 
 .contSectionCu .contSectionCu1, .contSectionCu .contSectionCu2, .contSectionCu .contSectionCu3 {
-  display: flex;
-  justify-content: left;
-  align-items: center; }
+  justify-content: left; }
   .contSectionCu .contSectionCu1 h3, .contSectionCu .contSectionCu2 h3, .contSectionCu .contSectionCu3 h3 {
     font-size: 1rem;
     font-weight: 700; }
@@ -607,9 +619,10 @@ main .tituloCu h1 {
       color: #f1d0d0;
       font-weight: bold;
       border-radius: 1rem;
+      font-size: 1.15rem;
       padding: 0.4rem 1.1rem;
       border: none;
-      margin-right: 4rem; }
+      margin-right: 2.9rem; }
 
 .section2 .backHomeCu {
   text-align: center;
@@ -654,13 +667,6 @@ main .tituloCu h1 {
       .contFormCu .formCu .bottonForm {
         text-align: right;
         margin: 1.5rem 1rem; }
-        .contFormCu .formCu .bottonForm .btnStile {
-          background-color: #539dde;
-          color: #f1d0d0;
-          font-weight: bold;
-          border-radius: 1rem;
-          padding: 0.4rem 1.1rem;
-          border: none; }
   .section2 .backHomeCu {
     margin: 2rem; }
     .section2 .backHomeCu img {
