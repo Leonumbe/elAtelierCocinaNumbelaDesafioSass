@@ -6,9 +6,9 @@
 .contenedorPadreIndex{
    height: 80vh;
    display: grid;
-   grid-template-areas: "header header header header"
-                         "main main main main"
+   grid-template-areas:  "header header header header"
                          "section1 section1 section1 section1"
+                         "main main main main"
                          "section2 section2 section2 section2"
                          "section3 section3 section3 section3"
                          "footer footer footer footer";
@@ -21,17 +21,14 @@ header{
    top: 0;
    z-index: 1;
 }      
-.tituloAu{
-   grid-area: main;
-}
 .section1{
    grid-area: section1;
 }
+.contMainIndex{
+   grid-area: main;
+}
 .section2{
    grid-area: section2;
-}
-.section3{
-   grid-area: section3;
 }
 footer{
    grid-area: footer;

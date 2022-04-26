@@ -10,6 +10,7 @@
 @import "utilities/mixins";
 @import "utilities/extends";
 @import "utilities/functions";
+@import "utilities/maps";
 
 //asociamos grid al index
 @import "layout/gridIndex";
@@ -35,13 +36,14 @@
 .headerMenu nav ul{
     list-style: none;
     text-align: center;
-    padding-bottom: 0.5rem;
+    padding-left: 0;
+    margin-bottom: 0.3rem;
     //edicion de menu
     li{
         display: inline-block;
         background-color: whitesmoke;
-        margin: 0.15rem;
-        padding: 5px;
+        margin: 0.1rem;
+        padding: 0px 5px;
         border-radius: 1rem;
         //animacion del menu
         &:hover{
@@ -83,14 +85,18 @@
 }
 //color y size del H3
 .footerText{
-    color: nth($colorFuente, 3);
-    font-size: 0.8rem;
-    text-align: center;
-    // detalle de linea
-    span{
-        color: nth($colorFuente, 2);
+   h3{
+      color: nth($colorFuente,3);
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 0%;
+      // detalle de linea
+      span{
+        color: nth($colorFuente,2);
         font-weight: bolder;
-    }
+      }
+   }
 }
 //ubicacionde redes sociales
 .footerRedes{
@@ -99,6 +105,7 @@
      //Face-Inst size
     .sideF, .sideI{
         width: 7.5%;
+        padding-bottom: 0.1rem;
         &:hover{
             transform: scale(1.2);
             transition: 0.5s;
@@ -107,34 +114,36 @@
 }
 /*----Cierre-Footer----*/
 
-/*----Prop Main-index----*/
+/*----Prop-index----*/
 //--version Mobile
-.contMainIndex{
-    @include estiloFondo1;
+
+/*Prop carrusel*/
+.section1{
+   .contenedorCarrusel{
+      img{
+         border: 0.5rem solid rgb(245, 245, 245);
+      
+      }
+   }
+   .carousel-control-prev-icon, .carousel-control-next-icon{
+      background-color: #777c818b;
+   }
 }
-//section1-imagenes
-.imgIndex{
-    text-align: center;
-    //marcos de imagenes main
-    .img1, .img2, .img3{
-        width: 50%;
-        border: 0.2rem solid rgba(243, 238, 233, 0.979);
-        margin: 0.5rem;
-    }
- }
 //section2-Prop. H1-H2-P
- .mainIndex{
-    text-align: center;
-    .editHead{
-        color: nth($colorFuente, 4);
-        font-size: 3rem;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
+.mainIndex{
+   text-align: center;
+   background-color: $colorFondo1;
+   .editHead{
+      font-size: 3rem;
+      padding-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      color:nth($colorFuente,4);     
     }
     .editSubt{
-        color: nth($colorFuente, 5);
-        font-size: 2rem;
-        padding-bottom: 1.5rem;
+      font-size: 2rem;
+      padding-bottom: 1.5rem;
+      margin-bottom: 0; 
+      color:nth($colorFuente,5);
     }
     .editP{
         display: none;
@@ -147,9 +156,9 @@
 //section3-WS
 .wsAnime{
     position: fixed;
-    bottom: 7rem;
+    bottom: 9rem;
     right: 0;
-    width: 15%;
+    width: 140px;
     /*Animacion en loop*/
     animation-name: vive;
     animation-iteration-count: infinite;
@@ -159,122 +168,605 @@
         50%{ transform: scale(1.10)}
     }
 }
-/*----cierre Main-index----*/
+/*----cierre-index----*/
 //---version Mobile
 
 @media only screen and (min-width: 768px){
       
-    /*-----Prop Header------*/
-    //---version laptop
-    header{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        .headerLogo img{
-            width: 80%;
-            margin-left: 2.5rem;
-        }
-        .headerMenu, .headerChart{
-            @include flexCenter
-        }
-        .headerChart{
-            text-align: center;
-            img{
-                width: 50%;
-            }
-        }
-        .headerMenu{
-            nav{
-                ul{
-                    li{
-                        border-radius: 2rem;
-                        a{
-                        justify-content: end;
-                        align-items: center;
-                        font-size: 1.1rem;
-                        font-weight: bold;
-                       
-                        }
-                    }
-                }
-            }
-        } 
-    }
-    /*----Cierre-header----*/
-    //--version Laptop 768px
+   /*-----Prop Header------*/
+   //---version laptop
+   header{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      .headerLogo img{
+         width: 80%;
+         margin-left: 2.5rem;
+      }
+      .headerMenu, .headerChart{
+         @include flexCenter
+      }
+      .headerChart{
+         text-align: center;
+         img{
+               width: 50%;
+         }
+      }
+      .headerMenu{
+         nav{
+               ul{
+                  li{
+                     border-radius: 2rem;
+                     a{
+                     justify-content: end;
+                     align-items: center;
+                     font-size: 1.1rem;
+                     font-weight: bold;
+                     
+                     }
+                  }
+               }
+         }
+      } 
+   }
+   /*----Cierre-header----*/
+   //--version Laptop 768px
 
-    /*----Prop Footer----*/
-    //---version Laptop 768px 
-    footer{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 10vh;
-        //Prop de "C"
-        .footerImgC{
+   /*----Prop Footer----*/
+   //---version Laptop 768px 
+   footer{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 10vh;
+      //Prop de "C"
+      .footerImgC{
+         margin-left: 4rem;
+         padding: 1rem; 
+         img{
+            width: 50%;
+         }
+      }
+      //color y size del H3
+      .footerText{
+         display: flex;
+         font-size: 1.10rem;
+         text-align: center;
+      }
+      //ubicacionde redes sociales
+      .footerRedes{
+         padding: 2rem;
+         //Face-Inst size
+         .sideF, .sideI{
+               width: 25%;
+               margin: 0.5rem;
+         }
+      }
+   }
+   /*----Cierre-Footer----*/
+   //--version Laptop 768px
+   /*-----------------------------*/
+   /*----Prop Main-Index----*/
+   //--version laptop 768px
+
+   //carrusel
+   .contGralCarrusel{
+      text-align: center;
+   }
+   .contCarrusel{
+      text-align: center;
+      border: 1rem solid whitesmoke;
+   }
+   //section2-index
+   //H1-H2-P color, size, margenes y paddins
+   .mainIndex{
+      .editHead{
+         font-size: 4rem;
+         padding-top: 2rem;
+         padding-bottom: 1rem;
+      }
+      .editSubt{
+         font-size: 2.5rem;
+      }
+      .editP{
+         margin: 0rem $mgP - 13;
+         padding-bottom: 3rem;
+         display: block;
+         font-size: 1.75rem;
+      }
+   }
+   .wsAnime{
+      bottom: 9rem;
+      width: 175px;
+   }
+}
+/*----------------------------*/
+//asociamos grid al html
+@import "layout/gridAu";
+    
+//*----Prop-aboutUs----*/
+//--Version Mobile
+
+//contenedor Main-AboutUs
+.contMainAu{
+   @include estiloFondo2
+   }  
+//titulo About us
+main{
+   .tituloAu{
+      padding: 1rem 0 1.5rem 2rem;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: bold;
+      color:nth($colorFuente,4);
+   }
+}
+//Section1
+.section1{
+   .block1Au{
+      @extend %stileBlock;
+      flex-flow: column wrap;
+      img{
+         margin: 0.3rem;
+         width: 49%;
+         border:5px solid white;
+      }
+      p{
+         @include blockP;
+      }
+   }
+   .block2Au{
+      flex-flow: column-reverse wrap;
+      @extend %stileBlock;
+      p{
+         @include blockP;
+      }
+      video{
+         margin: 0.3rem;
+         border: 5px solid rgb(19, 12, 12);
+         width: 50%;
+         height: 70%;
+      }
+   }
+}
+//Prop Filosofia
+.section2{
+   .subAboutUs{
+      padding: 0.75rem;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #1C2833;
+   }
+   .block3Au{
+      text-align: center;
+      .img1, .img2{
+         border: 5px solid white;
+         width: 50%;
+      }
+      p{
+         @include blockP;
+      }
+
+   }
+}
+    
+/*---cierre-About Us---*/
+//---version Mobile
+
+@media only screen and (min-width:768px){
+     
+   /*--Prop Main-AboutUs--*/
+   //version laptop
+   main{
+      .tituloAu{
+         @include tituloVs768
+      }
+   }
+   .section1{
+      .block1Au{
+         flex-flow: row nowrap;
+         justify-content: center;
+         margin: 1rem 4rem;
+         img{
+            width: 35%;
+            margin-left: 7rem;
+         }
+         p{
+            text-align: justify;
+            font-size: 1.1rem;
+            letter-spacing: 0.1rem;
+         } 
+      }
+      .block2Au{
+         flex-flow: row nowrap;
+         justify-content: center;
+         margin: 1rem 4rem;
+         p{
+            text-align: left;
             margin-left: 4rem;
-            padding: 1rem; 
-            img{
-                width: 50%;
-            }
-        }
-        //color y size del H3
-        .footerText{
-            display: flex;
-            font-size: 1.10rem;
+            font-size: 1.1rem;
+            letter-spacing: 0.1rem;
+         }
+         video{
+            width: 40%;
+            height: 30;
+            margin-right: 3rem;
+            margin-bottom: 2rem;
+         }
+      }
+   }
+   .section2{
+      .subAboutUs{
+         @include tituloVs768 
+      }
+      .block3Au{
+         display: flex;
+         flex-flow: row nowrap;
+         justify-content: center;
+         align-items: center;
+         margin: 0rem 2rem;
+         padding-bottom: 2rem;
+         .img1{
+            max-width: 40%;
+         }
+         p{
             text-align: center;
-        }
-        //ubicacionde redes sociales
-        .footerRedes{
-            padding: 2rem;
-            //Face-Inst size
-            .sideF, .sideI{
-                width: 25%;
-                margin: 0.5rem;
-            }
-        }
-    }
-    /*----Cierre-Footer----*/
-    //--version Laptop 768px
+            font-size: 1.1rem;
+            padding-left: 1.1rem;
+            padding-right: 1.1rem;
+         }
+         .img2{
+            width: 325px;
+         }
+      }
+   }
+}
+/*----Cierre-Aboutus----*/
+//--version laptop 
+
+/*-------------------------------------*/
+
+//asociamos grid al html
+@import "layout/gridFtg";
+
+/*----Prop Main-FoodtoGo----*/
+//--Version Mobile
+
+/*contenedor cuerpo Main*/
+.contMainFtg{
+@include estiloFondo1;
+font-family: 'Roboto', sans-serif;
    
-    /*----Prop Main-Index----*/
-    //--version laptop 768px
-    //section1-index
-    .imgIndex{
-        display: flex;
-        justify-content: center;
-        padding-top: 2rem;
-        //marcos de imagenes main
-        .img1, .img3{
-            width: 32%;
-            border: 0.3rem solid rgba(243, 238, 233, 0.979);
-            margin: 1rem;
-        }
-        .img2{
-            width: 30%;
-            border: 0.2rem solid rgba(243, 238, 233, 0.979);
-            margin-top: 1.2rem;
-        }
-    }
-    //section2-index
-    //H1-H2-P color, size, margenes y paddins
-    .mainIndex{
-        .editHead{
-            font-size: 4rem;
-            margin-top: 2rem;
-            padding-bottom: 1rem;
-        }
-        .editSubt{
-            font-size: 2.5rem;
-        }
-        .editP{
-            margin: 0rem $mgP - 13;
-            padding-bottom: 3rem;
-            display: block;
-            font-size: 1.75rem;
-        }
-    }
+}
+//titulo Ftg
+main{
+   .tituloFtg{
+      @extend %stileTB;
+      h1{
+      color:  rgb(247, 71, 71);
+      @extend %titulo1B;
+      }
+      h2{
+         display: none;
+      }
+   }
+}
+/*Prop Cards*/
+.section1{
+   .contS1Prod{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content:space-evenly;
+      .card{
+         margin: 2rem 5rem;
+         text-align: center;
+         padding: 0;
+         img{
+            border: 3.5px solid rgb(168, 164, 164);
+            }
+         .estiloCard{
+           background-image: linear-gradient(to right, whitesmoke, rgb(183, 174, 174));
+            }
+            .btn{
+               color:map-get($map: $btA, $key:color-btA);
+               border: none;
+               border-radius: map-get($map: $btA, $key:border-radius-btA);
+               font-weight: map-get($map: $btA, $key:font-weight-btA);
+               font-size: map-get($map: $btA, $key:font-size-btA);
+               background-color: map-get($map: $btA, $key:background-color-btA);
+               &:hover{transform: scale(1.1);
+               box-shadow: 3px 3px #1C2833;
+            }
+         }
+      }
+   }
+}
+/*----cierre-FoodtoGo----*/
+//--version Mobile
+  
+@media only screen and (min-width: 768px){
+ 
+   /*--Prop Main-FoodtoGo--*/
+   //--version Laptop  
+      main{
+         .tituloFtg{
+            margin-left: 2rem;
+            h1{
+            text-align: left;
+            font-size: 8rem;
+            font-weight: bold;
+            }
+            h2{
+               display: inline-block;
+               text-align: left;
+               font-size: 2.5rem;
+               font-weight: bold;
+               color: rgb(247, 71, 71);
+               background-color: nth($colorFuente,6);
+            }
+         }
+      }
+   /*----Cierre-FoodtoGo----*/
+   //--version laptop 
 }
 
+/*-----------------------------------------/
 
-    
+/*----Prop Main-Faqs----*/
+//--Version Mobile 480px
+
+//asociamos grid al html
+@import "layout/gridFaqs";
+
+.contMainFaqs{
+   @include estiloFondo3;
+   font-family:'Roboto', sans-serif;
+   color: #1C2833;
+} 
+main{
+   .tituloFaqs{
+      @extend %stileTB;
+      h1{
+      color: whitesmoke;
+      @extend %titulo1B;
+      }
+   }
+}
+.section1{
+   .subFaqs{
+      display: none;
+   }
+}
+//complemento bootstrap Accordion
+/*Prop Acordion*/
+.section2{
+   .contS2Faq{
+      .accordion{
+         margin: 0.5rem 1rem 3rem 1rem;
+         .estilosAcordion{
+            background-color: rgba(214, 205, 205, 0.897);
+            margin: 1rem 4rem;
+            .estiloTextoAcord{
+               background-color:rgba(214, 205, 205, 0.897);
+               font-weight: bold;
+               padding: 1rem;
+               font-size: 1rem;
+               p{
+                  font-size: 0.75rem;
+               }
+            }
+         }
+      }
+   }
+}
+/*----cierre Main-Faqs----*/
+//--version Mobile
+  
+@media only screen and (min-width: 768px){
+  
+   /*----Prop Main-Faqs----*/
+   //--version Laptop
+   main{
+      .tituloFaqs{
+         margin-left: 2rem;
+         h1{
+         text-align: left;
+         font-size: 8rem;
+         font-weight: bold;
+         color: whitesmoke;
+         }
+      }
+   }
+   .section1{     
+      .subFaqs {
+         display: inline-block;
+         margin-left: 4.75rem;
+         h2{
+         font-weight: bold;
+         margin-bottom: 1rem;
+         text-align: left;
+         font-size: 2.5rem;
+         color: whitesmoke;
+         background-color: rgb(83, 157, 222);
+         }
+      }
+   }
+}
+/*----Cierre Main-Faqs----*/
+//--version Laptop
+
+/*---------------------------------/
+
+/*----Prop Main-Contact Us---*/
+//--Version Mobile 
+
+//asociamos grid al html
+@import "layout/gridCu";
+
+.contMainCu{
+   @include estiloFondo2;
+   font-family:'Roboto', sans-serif;
+}
+main{
+   .tituloCu{
+      h1{
+         padding: 1.5rem 1rem 1.5rem 3rem;
+         text-align: center;
+         font-size: 2rem;
+         font-weight: bold;
+         color: #1C2833;
+      } 
+   }
+}
+.contSectionCu{
+   .contSectionCu1, .contSectionCu2, .contSectionCu3{
+      @extend %stileBlock;
+      justify-content: left;
+      h3{
+         font-size: 1rem;
+         font-weight: 700;
+      }
+      img{
+         width: 15%;
+         margin-left: 2.5rem;
+         padding: 0.75rem;
+      }
+   }
+   .mapaCu{
+      margin: 0.5rem 0rem;
+      text-align: center;
+   }      
+}
+//Prop subtitulo
+.section1{
+   .subTituloCu{
+      h2{
+      padding: 1rem 1rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #1C2833;
+      }
+   }
+}
+//agregar complemento boostrap
+.contFormCu{
+   text-align: left;
+   .stileForm{
+      font-size: 1.25rem;
+      font-weight: 500;
+      padding: 0.5rem 3rem;
+   }
+   .bottonForm{
+      text-align: right;
+      margin: 0.5rem 4rem;
+      .btnStile{
+         background-color: map-get($map:$btB, $key:background-color-btB);
+         color:map-get($map: $btB, $key:color-btB);
+         font-weight: map-get($map: $btB, $key:font-weight-btB);
+         border-radius: map-get($map: $btB, $key:border-radius-btB);
+         font-size: map-get($map: $btB, $key:font-size-btB );
+         padding:0.4rem 1.1rem;
+         border: none;
+         margin-right: 2.9rem;
+      }
+   }
+}
+//Animacion Botton-back    
+.section2{
+   .backHomeCu{
+      text-align: center;
+      padding: 1rem;
+      img{
+         width: 15%;
+         transition: 2s;
+         &:hover{ transform: scale(1.2);
+         }
+      }
+      p{
+         font-size: 0.75rem;
+         font-weight: bold;
+         color: nth($colorFuente, 9);
+      }
+   }
+
+}    
+/*---cierre Main-Contact Us-----*/
+//--version Mobile 
+
+@media only screen and (min-width: 768px){
+
+   /*----Prop Main-Contact Us---*/
+   //--Version Laptop
+   .contMainCu{
+      .contMainCu2{
+      display: flex;
+      justify-content:space-evenly;
+      }
+   }
+   main{
+      .tituloCu{
+         h1{
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: left;
+            font-size: 2.5rem;
+            padding: 0rem;
+         }
+      } 
+   }
+   .section1{
+      .subTituloCu{
+         h2{
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding: 0rem;
+            text-align: left;
+            font-size: 2.5rem;
+         }
+      } 
+   }
+
+   //complemento boostrap
+   .contFormCu{
+      text-align: left;
+      margin: 1rem 0rem;
+      .formCu{
+         margin: 0rem;
+         padding: 0rem;
+      
+         .stileForm{
+            font-size: 1.25rem;
+            font-weight: 500;
+            
+         }
+         .bottonForm{
+            text-align: right;
+            margin: 1.5rem 1rem;
+            
+         } 
+      }
+   }
+   //Animacion Botton-back    
+   .section2{
+      .backHomeCu{
+       margin: 2rem;
+         img{
+            width: 120px;
+           
+         }
+         p{
+            font-size: 1rem;
+           
+         }
+      }
+   }   
+}
+    /*----cierre-Contact Us----*/
+  //--version Laptop
+     
+/*--No es magia es codigo!!!!--*/
+/*gracias por permitirme salir de mi zona de confort y romperme la cabeza para que esto me salga, Grande Fede!!*/
+//--RIP--
+

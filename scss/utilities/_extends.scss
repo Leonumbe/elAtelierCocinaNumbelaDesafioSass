@@ -1,0 +1,18 @@
+@import "utilities/variables";
+
+//Extend estilos About us-Contact Us
+%stileBlock{
+    display: flex;
+    align-items: center;
+}
+//Extend titulos
+%titulo1B{
+    text-align: left;
+    font-size: 5rem;
+    font-weight: 900;
+}
+//extend estilos titulos
+%stileTB{
+    margin-left: 3rem;
+    padding: 1rem 0rem 0.5rem 2rem;
+}

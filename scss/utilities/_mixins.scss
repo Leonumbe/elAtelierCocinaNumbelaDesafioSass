@@ -1,17 +1,36 @@
-//mixin sin param
+//mixin estilo de fondo pared
 @mixin estiloFondo1{
     background-image: url(../../img/pared.jpg);
     background-size: cover;
 }
-
-//mixin sin param
+//mixin estilo de fondo madera
 @mixin estiloFondo2{
     background-image: url(../../img/madera.jpg);
     background-size: cover;
 }
-
+//mixin fondo faqs
+@mixin estiloFondo3{
+    background-image: url(../img/fondofaqs.webp);
+    background-size: cover;
+}
+//mixin generico flex
 @mixin flexCenter{
     display: flex;
     justify-content:center;
     align-items: center;
 }
+//mixin estilo titulos principales
+@mixin tituloVs768{
+    font-size: 1.5rem;
+    padding: 2rem 5.5rem 1rem; 
+}
+//mixin estilo-parrafos bloques
+@mixin blockP{
+    padding: 0.3rem 3rem;
+    text-align: justify;
+    font-family:'Roboto', sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #1C2833;
+}
+//mixin modelo botton1
